@@ -1,14 +1,6 @@
 /*
  * Created by weishuwen on 2015/3/16.
  *
- * 名称都是用小写
- *
- * config中 toorbar 添加 editone
- *          lapmap 添加 editone对象title
- * editor中 btnCmds 添加 editone
- *
- * 图片udeditor.css里修改
- *
  * html样式片段不能加空格
 */
 
@@ -88,8 +80,6 @@ UE.plugins["editone"] = function () {
                 console.log((html));
 
                 try {
-
-//                    空格去掉
                     me.execCommand('insertHtml', html);
                 } catch (e) {
 

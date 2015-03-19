@@ -12,3 +12,12 @@
     ueditor
         |--    百度编辑器的内容
     demo.html 项目主页  
+# 增加自定按钮
+    在ueditor的config文件中 
+    * toorbar 数组上加 customname
+    * lapmap 对象加 customname: "title"
+    在ueditor的editor文件中
+    * btnCmds 数组上加 customname
+    在udeditor.css文件中增加对应class的宽度和样式
+    注：名称都用小写
+# 事件触发
