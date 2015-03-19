@@ -1,0 +1,32 @@
+﻿/*
+    仿WORD编辑器
+    基于baidu ueditor二次开发
+*/
+body{padding:0;margin:0;font-size:13px;}
+#editor { width: 100%; }
+#editor_toolbar { position:absolute;top:0;width:100%;height:140px;border-bottom:1px solid #E1E1E1;}
+#editor_iframe_holder { position:absolute;width:100%;top:141px;bottom:0; overflow:auto;text-align:center;background:#FAFAFA;}
+#editor_iframe_holder .edui-editor{margin:30px auto;width:601px;padding:86px;border:1px solid #E1E1E1;background:#fff;-moz-box-shadow:3px 3px 3px #ccc ; -webkit-box-shadow:3px 3px 3px #ccc ;box-shadow:0px 0px 3px #ccc ;}
+#edui1_toolbarbox{display:none;}
+        
+#editor_toolbar_nav,#toolbar_item_list{padding:0;margin:0;clear:both;list-style:none;border-bottom:1px solid #E1E1E1;height:25px;}
+#toolbar_item_list,#toolbar_item_list li{height:100px;overflow:hidden;}
+#editor_toolbar_nav li{float:left;padding-right:5px;}
+#editor_toolbar_nav li a{display:block;text-align:center;padding:0 15px;text-decoration:none;color:#333;height:25px;line-height:25px;padding-top:1px;}
+#editor_toolbar_nav a.a-file{background:#3E6DB5;color:#fff;}
+#editor_toolbar_nav li a.curr{border:1px solid #E1E1E1;border-bottom:none;background:#fff;padding-top:0;}
+#toolbar_item_list li {padding:6px 0;}
+#toolbar_font{float:left;border-right:1px solid #E1E1E1;padding-right:5px;margin-right:5px;}
+#toolbar_item_list #toolbar_insert{padding-top:2px;}
+#toolbar_insert .edui-button,#toolbar_insert .edui-splitbutton{margin-right:5px;}
+#toolbar_insert .edui-icon{width:40px !important;height:20px !important;padding-top:40px;text-align:center;color:#555;}
+#toolbar_insert .edui-for-inserttable .edui-icon{background:url(images/table.png) center 5px no-repeat;}
+#toolbar_insert .edui-for-insertimage .edui-icon{background:url(images/photo.png) center 5px no-repeat;}
+#toolbar_insert .edui-for-emotion .edui-icon{background:url(images/face.png) center 5px no-repeat;}
+#toolbar_insert .edui-for-scrawl .edui-icon{background:url(images/draw.png) center 5px no-repeat;}
+#toolbar_insert .edui-for-insertvideo .edui-icon{background:url(images/video.png) center 5px no-repeat;}
+#toolbar_insert .edui-for-attachment .edui-icon{background:url(images/clip.png) center 5px no-repeat;}
+#toolbar_insert .edui-for-map .edui-icon{background:url(images/map.png) center 5px no-repeat;}
+#toolbar_font .edui-toolbar,#toolbar_list .edui-toolbar{padding-top:5px;}
+#toolbar_img_edit .edui-toolbar,#toolbar_table_edit .edui-toolbar{padding-top:5px;}
+#toolbar_img_edit .edui-icon,#toolbar_table_edit .edui-icon{margin:10px;}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style/farbtastic.css"/>
+</head>
+<body>
+<form><input type="text" id="color" name="color" value="#123456" /></form>
+
+<div id="colorpicker"></div>
+</body>
+<script type="text/javascript" src="script/jquery.js"></script>
+<script type="text/javascript" src="script/farbtastic.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('#colorpicker').farbtastic('#color');
+
+    });
+</script>
+</html>

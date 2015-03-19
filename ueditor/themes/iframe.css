@@ -1,0 +1,5 @@
+/*可以在这里添加你自己的css*/
+.control { display: inline-block; width: 150px; height: 24px; line-height: 24px; padding: 0 5px; text-align: left; font-style: normal; white-space: nowrap; border: solid 1px #DDD; }
+.tblForm { margin: auto; border: solid 1px #ddd; border-collapse: collapse; }
+.tblForm caption { line-height: 40px; border: solid 1px #ddd; border-bottom:none; }
+.tblForm td { padding: 8px; position: static; border: solid 1px #ddd; }
