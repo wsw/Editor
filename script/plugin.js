@@ -3,8 +3,7 @@
  *
  * html样式片段不能加空格
 */
-
-UE.plugins["editone"] = function () {
+UE.plugins["editstyle"] = function () {
     var me = this;
     var dialog = null;
     var COMMAND = {
@@ -33,13 +32,16 @@ UE.plugins["editone"] = function () {
         = me.commands["editseven"]
         = me.commands["editeight"]
         =
-    {   execCommand: function(cmd) {
+    {
+        execCommand: function(cmd) {
             // 判断是否要绑定事件
             var flag = true;
             if (!dialog) {
                 dialog = new baidu.editor.ui.Dialog({
                     title: '在线微信样式',
-                    content: $("#styleDialog").html(),
+                    ///content: $("#styleDialog").html(),
+                    content: styleDialog.render({}),
+                    draggable: true,
                     editor: this
                 });
                 flag = false;
@@ -61,6 +63,8 @@ UE.plugins["editone"] = function () {
                  * 对话框头部导航事件绑定
                  */
                 switchTab(node.find('.style-nav a'), node.find('.style-section'), $(this).index());
+
+                return false;
             }).on('click', 'ul li', function() {
                 /**
                  * 内容区域块的选项绑定
@@ -70,6 +74,8 @@ UE.plugins["editone"] = function () {
                 var text = root.find('.style-footer-text');
 
                 text.html(element.html());
+
+                return false;
             }).on('click', '.style-footer a', function() {
                 /**
                  * 对话框确定按钮的绑定
@@ -77,7 +83,7 @@ UE.plugins["editone"] = function () {
                 var element = $(this);
                 var html = element.parent().find('.style-footer-text').html();
 
-                console.log((html));
+                //console.log((html));
 
                 try {
                     me.execCommand('insertHtml', html);
@@ -101,14 +107,21 @@ UE.plugins["editone"] = function () {
                     color.css({"border-color": _this.color}).val(_this.color);
                     // 当前选择项目查找样式值以及改变颜色
                     modify.each(function(index, value) {
-                        var className = $(this)[0].className;
+                        var className = $(this)[0].className;  //允许多个class
                         var style = $(this)[0].style;
-                        if ("brcolor" == className) {
-                            style.borderColor = _this.color;
-                        }
-                        if ("bkcolor" == className) {
-                            style.backgroundColor = _this.color;
-                        }
+                        var names = className.split(" ");
+
+                        $.each(names, function(index, value) {
+                            if ("brcolor" == value) {
+                                style.borderColor = _this.color;
+                            }
+                            if ("bkcolor" == value) {
+                                style.backgroundColor = _this.color;
+                            }
+                            if ("bfcolor" == value) {
+                                style.color = _this.color;
+                            }
+                        });
                     });
                 });
             });

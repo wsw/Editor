@@ -17388,7 +17388,7 @@ baidu.editor.ui = {};
                 uiUtils.startDrag(evt, {
                     ondragstart: function (){
                         rect = uiUtils.getClientRect(me.getDom());
-                        me.getDom('contmask').style.visibility = 'visible';
+                        me.getDom('contmask') && (me.getDom('contmask').style.visibility = 'visible');
                         me.dragMask.show(me.getDom().style.zIndex - 1);
                     },
                     ondragmove: function (x, y){
@@ -17400,7 +17400,7 @@ baidu.editor.ui = {};
                         });
                     },
                     ondragstop: function (){
-                        me.getDom('contmask').style.visibility = 'hidden';
+                        me.getDom('contmask') && (me.getDom('contmask').style.visibility = 'hidden');
                         domUtils.removeClasses(me.getDom(), ['edui-state-centered']);
                         me.dragMask.hide();
                     }
