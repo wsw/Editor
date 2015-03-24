@@ -1,0 +1,89 @@
+div.style-content {
+    width: 620px; height: 555px; padding: 10px;
+}
+.style-content .style-nav {
+     border-bottom: 1px solid #ccc;
+    left: 0;
+    right:0;
+    margin:0;
+    padding-left:20px;
+    position: absolute;
+    background:#fff;
+
+    z-index:9;
+}
+.style-content .style-nav a{
+    display: inline-block; height: 34px; text-decoration: none;
+    color: #428bca; line-height: 34px; padding: 0 15px; font-size: 12px;
+}
+.style-content .style-nav a:hover, .style-content .style-nav a.active {
+    border-bottom: 1px solid #428bca; color: #555;;
+}
+.style-content .style-section {
+    display: none;
+}
+.style-content .style-condition {
+    margin: 0; 
+    overflow: auto;
+    position:absolute;top:45px;bottom:120px;
+   
+    left:0;
+    right:0;
+    padding:15px;
+}
+.style-content .style-condition ul {
+    list-style: none;
+}
+
+.style-content .style-condition ul li img {
+    max-width: 100%;
+}
+
+.style-content .style-condition-1 {
+    margin: 0;padding:15px; overflow: auto; width: 400px;
+    position:absolute;top:45px;bottom:120px;left:0;
+}
+
+.style-content .style-condition ul li,
+.style-content .style-condition-1 ul li {
+    border: 1px dashed #eee; margin: 5px; padding: 5px;
+    list-style:none;
+}
+.style-content .style-condition ul li:hover,
+.style-content .style-condition-1 ul li:hover {
+    border: 2px solid #5cbb3f;
+}
+
+.style-content .style-side {
+    position: absolute; width: 200px; height: 360px; right:5px;top:20px;
+}
+.style-content .style-side h2 {
+    font-weight: normal; padding: 15px;
+}
+.style-content .style-side .colorpicker {
+    margin-top: 40px; text-align: center;
+}
+.style-content .style-side input {
+    width: 150px; margin-left: 25px; height: 35px; line-height: 35px; margin-top: 30px;
+    border-width: 1px; outline: none; padding: 0 5px;
+}
+.style-footer {
+    height: 120px; 
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:#fff;border-top:1px solid #ccc;
+    left:0px;
+    
+    z-index:9;
+}
+.style-footer .style-footer-text {
+      height: 100px;
+    overflow: auto;
+    padding: 10px 0 0 20px;
+    width: 450px;
+}
+.style-footer a {
+    position: absolute; width:100px;height:60px;line-height:60px;right:30px;bottom:30px;text-align:center;
+    color:#fff;background:#5cbb3f;text-decoration:none;
+}
